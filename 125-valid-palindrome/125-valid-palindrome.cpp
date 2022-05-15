@@ -1,16 +1,12 @@
 class Solution {
-public:
-    
-
-    
+public:  
     bool validCharacter(char chr){
         if( (chr>='a' && chr<='z') || (chr>='A' && chr<='Z') || (chr>='0' && chr<='9'))
             return true;
         else return false;
-    }
+    } 
     
-    char toLower(char chr){
-        
+    char toLower(char chr){   
     if( (chr >='a' && chr <='z') || (chr>='0' && chr<='9'))
             return chr;
     else chr = chr + 32;
@@ -27,8 +23,7 @@ public:
         else {
             start++;
             end--;
-        }
-        
+        }        
     }
         return true;
     }
@@ -43,8 +38,7 @@ public:
         
         for(int j=0;j<temp.size();j++){
             temp[j] = toLower(temp[j]);
-        }
-        
+        }        
        return checkPalindrome(temp);
     }
 };
