@@ -1,15 +1,13 @@
 class Solution {
 public:
-    bool checkEqual(vector<int> count1, vector<int> count2){
-        
+    bool checkEqual(vector<int> count1, vector<int> count2){        
         for(int i=0;i<26;i++){
             if(count1[i] != count2[i])
                 return 0;
         }
         return 1;
     }
-    bool checkInclusion(string s1, string s2) {
-        
+    bool checkInclusion(string s1, string s2) {        
         vector<int> count1(26,0);
         for(int i=0;i<s1.length();i++){
             int number = s1[i] - 'a';
@@ -37,11 +35,9 @@ public:
             int index3 = s2[i - windowSize] - 'a';
             count2[index3]--;
             
-            i++;
-            
+            i++; 
             if(checkEqual (count1 , count2))
-                return 1;
-            
+                return 1;            
         }
         return 0;
     }
