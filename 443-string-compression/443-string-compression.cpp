@@ -8,16 +8,13 @@ public:
 
 	while(i < n){
 		int j = i+1;
-
 		while(j < n && chars[i] == chars[j])
 		{
 			j++;
 		}
 		chars[ansIndex++] = chars[i];
-		
 		int count = j-i;
-		if(count > 1){
-            
+		if(count > 1){  
 			string cnt = to_string(count);
 			for(auto counting: cnt){
 				chars[ansIndex++] = counting;
