@@ -24,7 +24,7 @@ public:
                 start = mid+1;
             
             else if(guess(mid) == -1)
-                end = mid;
+                end = mid-1;
         }
         return mid;
     }
