@@ -14,8 +14,7 @@ class Solution{
         vector<int> ans = {A,B,C};
         sort(ans.begin(),ans.end());
         
-        int final = ans[1];
-        return final;
+        return ans[1];
     }
 };
 
