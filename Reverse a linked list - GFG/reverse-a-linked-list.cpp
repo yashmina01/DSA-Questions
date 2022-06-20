@@ -37,14 +37,19 @@ class Solution
     {
         // code here
         // return head of reversed list
+        if(head == NULL || head->next == NULL){     //agar list hi empty ho ya sirf 1 node ho toh
+            return head;
+        }
+        
         Node* previous = NULL;
         Node* current = head;
         Node* forward = current->next;
         
         while(current != NULL){
-            Node* forward = current->next;
+            Node* forward = current->next;          //for traversal
+            
             current->next = previous;
-            previous = current;
+            previous = current;                     //preious and current ko aage bada diya
             current = forward;
         }
         return previous;
