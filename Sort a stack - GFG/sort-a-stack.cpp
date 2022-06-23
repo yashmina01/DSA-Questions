@@ -51,6 +51,7 @@ public:
 you are required to complete the below method */
 void insertSorted(stack<int> &s,int num){
     
+    //Base case if inserting only if stack is empty or top element is <= to inserting element
     if(s.empty() || (!s.empty() && s.top() <= num) ){
         s.push(num);
         return ;
