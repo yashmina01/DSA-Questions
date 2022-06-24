@@ -7,24 +7,23 @@ class Solution{
     public:
     void segregateElements(int arr[],int n)
     {
-        // Your code goes here
-        int start = 0;
-        int mid = 0;
-        int end = n-1;
+    // Your code goes here
         vector<int> ans;
         
       for(int i=0;i<n;i++) {
           if(arr[i]>=0)
           ans.push_back(arr[i]);
       }
+      
       for(int i=0;i<n;i++) {
           if(arr[i]<0)
           ans.push_back(arr[i]);
       }
-      for(int i=0;i<n;i++) {
+      
+      for(int i=0;i<n;i++) 
           arr[i] = ans[i];
-      }
-        }
+   
+    }
 };
 
 // { Driver Code Starts.
